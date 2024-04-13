@@ -1,0 +1,6 @@
+.fixed_header {
+    position: fixed !important;
+    max-height: fit-content !important;
+    z-index: 1000;
+    transition: all ease;
+}

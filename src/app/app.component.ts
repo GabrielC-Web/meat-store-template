@@ -9,4 +9,13 @@ export const CC_PROJECT_INITIALS = 'f-template';
 })
 export class AppComponent {
   title = 'meat-store-template';
+
+  ngOnInit() {
+
+    document.documentElement.style.setProperty('--v-dynamic-primary', '#E76715');
+    document.documentElement.style.setProperty('--v-dynamic-primary-selected', '#E76715');
+
+  }
+
 }
+

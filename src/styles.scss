@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*--------------------------------------------------------------------------------------------------------------------------------------
+ Importaciones de Archivo de Estilos
+--------------------------------------------------------------------------------------------------------------------------------------*/
+
+@import "node_modules/bootstrap/dist/css/bootstrap.css";
+@import "./app/common/assets/styles/scss/backgrounds.scss";
+@import "./app/common/assets/styles/scss/materialize.scss";
+@import "./assets/styles/scss/text.scss";
+@import "./app/common/assets/styles/scss/variables.scss";
+@import "./app/common/assets/styles/scss/effects.scss";
+@import "./app/common/assets/styles/scss/themes-material.scss";
+
+*:not(.material-icons) {
+    font-family: "montserrat" !important;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}

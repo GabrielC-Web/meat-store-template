@@ -1,1 +1,71 @@
-<p>main-header works!</p>
+<header class="d-flex justify-content-evenly align-items-center">
+
+    <!-- Logo -->
+    <img [src]="mainLogo" class="main_logo">
+
+    <!-- Menu -->
+    <div class="d-none d-md-flex">
+        <div *ngFor="let button of buttons">
+
+            <!-- Botón -->
+            <button mat-button [matMenuTriggerFor]="belowMenu" class="cmm-txt-thin-bold">{{button.text}}</button>
+
+            <!-- Menú -->
+            <mat-menu #belowMenu="matMenu" yPosition="below" [ngClass]="button.menus.length == 0? 'd-none': ''">
+
+                <button *ngFor="let item of button.matMenus" mat-menu-item>{{item}}</button>
+
+            </mat-menu>
+
+        </div>
+    </div>
+
+    <!-- Buscador -->
+    <cmm-cmp-i-text class="w-40 flex-grow-1 mx-3" [subscriptSizing]="'dynamic'" style="max-width: 400px;"
+        placeholder="¿Qué necesitas?" label="¿Qué necesitas?" subscriptSizing="dynamic"></cmm-cmp-i-text>
+
+    <!-- Botones -->
+    <div class="d-none d-md-flex flex-row">
+
+        <img [src]="icons.person" class="header_icon">
+
+        <img [src]="icons.kart" class="header_icon">
+
+    </div>
+
+    <!-- menú responsive -->
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="d-flex d-md-none"
+        aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu" class="d-flex align-items-center justify-content-center flex-column">
+
+        <div class="d-flex flex-column">
+            <div *ngFor="let button of buttons">
+
+                <!-- Botón -->
+                <button mat-button [matMenuTriggerFor]="belowMenu" class="cmm-txt-thin-bold">{{button.text}}</button>
+
+                <!-- Menú -->
+                <mat-menu #belowMenu="matMenu" yPosition="below" [ngClass]="button.menus.length == 0? 'd-none': ''">
+
+                    <button *ngFor="let item of button.matMenus" mat-menu-item>{{item}}</button>
+
+                </mat-menu>
+
+            </div>
+        </div>
+
+        <div class="d-flex flex-column align-items-center">
+
+            <img [src]="icons.person" class="header_icon">
+
+            <img [src]="icons.kart" class="header_icon">
+
+        </div>
+
+    </mat-menu>
+
+</header>

@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { CmmModule } from 'src/app/common/common.module';
 import { CoreButtonComponent } from './components/core-button/core-button.component';
 import { CoreBrandsComponent } from './components/core-brands/core-brands.component';
+import { CoreProductCardComponent } from './components/core-product-card/core-product-card.component';
 
 
 @NgModule({
     declarations: [
         CoreButtonComponent,
-        CoreBrandsComponent
+        CoreBrandsComponent,
+        CoreProductCardComponent
     ],
     imports: [
         CommonModule,
@@ -16,7 +18,8 @@ import { CoreBrandsComponent } from './components/core-brands/core-brands.compon
     ],
     exports: [
         CoreButtonComponent,
-        CoreBrandsComponent
+        CoreBrandsComponent,
+        CoreProductCardComponent
     ]
 })
 export class CoreModule { }

@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center flex-column align-items-center p-3"
+    style="background-color: #947676;max-width: 100%;border-radius: 30px;max-width: 250px;">
+
+    <!-- Imagen -->
+    <img class="w-100" [src]="data.image" style="max-width: 250px;">
+
+    <!-- Texto -->
+    <h5 class="text-white text-center cmm-txt-thin-bold">{{data.name}}</h5>
+
+    <span class="text-white cmm-txt-thin-bold">{{data.price}}</span>
+
+    <span class="text-white fs-10 cmm-txt-thin-bold mt-2">{{data.aditionalInfo}}</span>
+
+    <!-- botones -->
+    <div class="d-flex mt-3">
+
+        <cmp-cmm-new-button class="cmm-txt-thin-bold fs-20">Añadir</cmp-cmm-new-button>
+
+    </div>
+
+</div>

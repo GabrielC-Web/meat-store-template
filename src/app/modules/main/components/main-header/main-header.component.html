@@ -13,7 +13,7 @@
             <!-- Menú -->
             <mat-menu #belowMenu="matMenu" yPosition="below" [ngClass]="button.menus.length == 0? 'd-none': ''">
 
-                <button *ngFor="let item of button.matMenus" mat-menu-item>{{item}}</button>
+                <button class="border-bottom" *ngFor="let item of button.menus" mat-menu-item>{{item.text}}</button>
 
             </mat-menu>
 

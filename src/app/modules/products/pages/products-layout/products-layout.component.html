@@ -1,0 +1,43 @@
+<div class="row w-100">
+
+    <div class="col-12">
+
+        <div class="row">
+
+            <div *ngFor="let filter of filters"
+                class="col-sm-6 col-md-2 border-bottom cursor-pointer d-flex justify-content-center filter">
+
+                <span class="text-center cmm-txt-thin-bold">{{filter.text}}</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <section class="col-12 mt-5">
+
+        <h3 class="text-center cmm-txt-thin-bold cmm-txt-project-secondary">LO MEJOR EN CORTES DE POLLO</h3>
+        <p class="text-center cmm-txt-thin-bold cmm-txt-project-secondary">Productos frescos todos los días</p>
+
+        <!-- productos -->
+        <div class="row g-0 w-100 justify-content-center mt-5">
+
+            <div *ngFor="let product of products" class="col-12 col-sm-6 col-md-4 d-flex justify-content-center mb-5">
+
+                <cmp-core-product-card [data]="product"></cmp-core-product-card>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- También podría interesarte -->
+    <section class="col-12 mt-5">
+
+        <h3 class="cmm-txt-project-secondary text-center">También podría interesarte</h3>
+
+    </section>
+
+</div>

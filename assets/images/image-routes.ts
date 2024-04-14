@@ -13,7 +13,11 @@ export const icons = {
     twitter: 'assets/images/icons/icons8-twitter.svg',
     facebook: 'assets/images/icons/icons8-facebook.svg',
     instagram: 'assets/images/icons/icons8-instagram.svg',
-    whatsapp: 'assets/images/icons/nd_whatsapp_icon.svg'
+    whatsapp: 'assets/images/icons/nd_whatsapp_icon.svg',
+    corn: 'assets/images/icons/corn.svg',
+    house: 'assets/images/icons/house.svg',
+    screen_with_kart: 'assets/images/icons/screen_with_kart.svg',
+    trash: 'assets/images/icons/trash.svg',
 }
 
 export const logos = {

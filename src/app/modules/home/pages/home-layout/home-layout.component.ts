@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { homeImages, products } from 'src/assets/images/image-routes';
+import { homeImages, icons, products } from 'src/assets/images/image-routes';
 
 @Component({
   selector: 'pag-home-layout',
@@ -58,6 +58,29 @@ export class HomeLayoutComponent {
    * Producto seleccionado
    */
   productSelected: any
+
+  items: any[] = [
+    {
+      icon: icons.corn,
+      info: 'Elaborados sin gluten'
+    },
+    {
+      icon: icons.house,
+      info: 'Empresa familiar desde 1934'
+    },
+    {
+      icon: icons.corn,
+      info: 'Reparto en vehículo refrigerado'
+    },
+    {
+      icon: icons.van,
+      info: 'Envío GRATIS Pago seguro'
+    },
+  ]
+
+  constructor() {
+
+  }
 
   /**
    * Funcion para seleccionar el siguiente elemento del carrucel

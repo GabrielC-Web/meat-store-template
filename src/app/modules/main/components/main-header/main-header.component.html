@@ -8,7 +8,8 @@
         <div *ngFor="let button of buttons">
 
             <!-- Botón -->
-            <button mat-button [matMenuTriggerFor]="belowMenu" class="cmm-txt-thin-bold">{{button.text}}</button>
+            <button mat-button [matMenuTriggerFor]="belowMenu" class="cmm-txt-thin-bold"
+                [routerLink]="'products'">{{button.text}}</button>
 
             <!-- Menú -->
             <mat-menu #belowMenu="matMenu" yPosition="below" [ngClass]="button.menus.length == 0? 'd-none': ''">

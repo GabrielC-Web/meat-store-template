@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'cmp-core-product-card',
@@ -18,5 +18,20 @@ export class CoreProductCardComponent {
    * Cantidad de producto agragada al carrito
    */
   productQuantity: number = 0
+
+  /**
+   * Emite evento de quitar del carrito
+   */
+  @Output() removeEvent: EventEmitter<any> = new EventEmitter()
+
+  /**
+   * Emite evento de sumar al carrito
+   */
+  @Output() addEvent: EventEmitter<any> = new EventEmitter()
+
+  /**
+   * Emite evento de añadir al carro
+   */
+  @Output() addToCart: EventEmitter<any> = new EventEmitter()
 
 }

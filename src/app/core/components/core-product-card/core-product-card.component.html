@@ -1,8 +1,12 @@
 <div class="d-flex justify-content-center flex-column align-items-center p-3"
-    style="background-color: #947676;max-width: 100%;border-radius: 30px;max-width: 250px;">
+    style="max-width: 100%;border-radius: 40px;max-width: 250px;" [style.background-color]="bgColor">
 
     <!-- Imagen -->
-    <img class="w-100" [src]="data.image" style="max-width: 250px;">
+    <div class="w-100 cardImageContainer">
+
+      <img class="w-100 bg-white" [src]="data.image" style="aspect-ratio: 1;border-radius: inherit;">
+
+    </div>
 
     <!-- Texto -->
     <h5 class="text-white text-center cmm-txt-thin-bold">{{data.name}}</h5>

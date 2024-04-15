@@ -9,4 +9,9 @@ export class CoreProductCardComponent {
 
   @Input() data: any
 
+  /**
+   * Color de fondo
+   */
+  @Input() bgColor: string = '#947676'
+
 }

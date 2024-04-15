@@ -14,4 +14,9 @@ export class CoreProductCardComponent {
    */
   @Input() bgColor: string = '#947676'
 
+  /**
+   * Cantidad de producto agragada al carrito
+   */
+  productQuantity: number = 0
+
 }

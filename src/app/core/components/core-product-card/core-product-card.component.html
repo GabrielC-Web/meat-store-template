@@ -16,9 +16,21 @@
     <span class="text-white fs-10 cmm-txt-thin-bold mt-2">{{data.aditionalInfo}}</span>
 
     <!-- botones -->
-    <div class="d-flex mt-3">
+    <div class="row g-0 w-100 mx-auto mt-3">
 
-        <cmp-cmm-new-button class="cmm-txt-thin-bold fs-20">Añadir</cmp-cmm-new-button>
+      <div class="col-6 d-flex align-items-center">
+
+        <div class="bg-white" style="width: 20px;height: 20px;border-radius: 50%;">-</div>
+
+        <div class="bg-white px-3 py-2 rounded w-fit">
+          {{productQuantity}}
+        </div>
+
+        <div class="bg-white" style="width: 20px;height: 20px;border-radius: 50%;">+</div>
+
+      </div>
+
+      <cmp-cmm-new-button class="cmm-txt-thin-bold fs-20 col-6">Añadir</cmp-cmm-new-button>
 
     </div>
 

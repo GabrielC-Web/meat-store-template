@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { homeImages, icons, products } from 'src/assets/images/image-routes';
 
 @Component({
@@ -54,6 +54,20 @@ export class HomeLayoutComponent {
     ],
   ]
 
+  popularProductsSmallScreen: any[] = []
+
+  @HostListener('window:resize', ['$event'])
+  onResize(e: Event) {
+
+    //* Veo si la pantalla es lo suficientemente pequeña
+    if(window.innerWidth <= 992) {
+      this.changeListMode()
+    } else {
+      this.popularProductsSmallScreen = []
+    }
+
+  }
+
   /**
    * Producto seleccionado
    */
@@ -79,6 +93,17 @@ export class HomeLayoutComponent {
   ]
 
   constructor() {
+
+  }
+
+  ngOnInit() {
+
+    //* Veo si la pantalla es lo suficientemente pequeña
+    if(window.innerWidth <= 992) {
+      this.changeListMode()
+    } else {
+      this.popularProductsSmallScreen = []
+    }
 
   }
 
@@ -124,6 +149,27 @@ export class HomeLayoutComponent {
 
     // Guardo el id de la imagen seleccionada
     this.productSelected = idImg;
+
+  }
+
+  /**
+   * Genera una lista con todos los items del listado con secciones de items
+   */
+  changeListMode() {
+
+    //* Vacío el listado
+    this.popularProductsSmallScreen = []
+
+    //* Creo el listado con todos los items por separado
+    this.popularProducts.forEach(section => {
+
+      section.forEach( (item: any) => {
+
+        this.popularProductsSmallScreen.push(item)
+
+      })
+
+    })
 
   }
 

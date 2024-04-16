@@ -25,7 +25,7 @@
 
       <div *ngFor="let product of products" class="col-12 col-sm-6 col-md-4 d-flex justify-content-center mb-5">
 
-        <cmp-core-product-card [data]="product"></cmp-core-product-card>
+        <cmp-core-product-card [data]="product" [config]="{bgColor: '#DFDDDE', textColor: 'black'}"></cmp-core-product-card>
 
       </div>
 
@@ -58,7 +58,7 @@
 
           <div class="w-100 h-100 p-0 d-flex justify-content-center align-items-center" style="gap: 2rem;">
 
-            <cmp-core-product-card *ngFor="let item of productSection" [data]="item"></cmp-core-product-card>
+            <cmp-core-product-card *ngFor="let item of productSection" [data]="item" [config]="{bgColor: 'linear-gradient(90deg, #290302, #5B0506);'}"></cmp-core-product-card>
 
           </div>
 
@@ -74,7 +74,7 @@
 
           <div class="w-100 h-100 p-0 d-flex justify-content-center align-items-center" style="gap: 2rem;">
 
-            <cmp-core-product-card [data]="item"></cmp-core-product-card>
+            <cmp-core-product-card [data]="item" [config]="{bgColor: 'linear-gradient(90deg, #290302, #5B0506)'}"></cmp-core-product-card>
 
           </div>
 

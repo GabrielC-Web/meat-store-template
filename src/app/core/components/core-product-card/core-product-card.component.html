@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-between flex-column align-items-center p-3 product_card h-100"
-  [ngStyle]="{'background-color':config.bgColor?config.bgColor:''}">
+  [ngStyle]="{'background':config.bgColor?config.bgColor:''}">
 
   <!-- Imagen -->
   <div class="w-100 cardImageContainer">
@@ -9,12 +9,13 @@
   </div>
 
   <div class="w-100 d-flex flex-column align-items-center" style="height: 40%;">
+
     <!-- Texto -->
-    <h5 class="text-white text-center cmm-txt-thin-bold">{{data.name}}</h5>
+    <h5 class="text-center cmm-txt-thin-bold" [ngClass]="!config.textColor?'text-white':''" [ngStyle]="{'text-color':config.textColor?config.textColor: ''}">{{data.name}}</h5>
 
-    <span class="text-white cmm-txt-thin-bold">{{data.price}}</span>
+    <span class="cmm-txt-thin-bold" [ngClass]="!config.textColor?'text-white':''" [ngStyle]="{'text-color':config.textColor?config.textColor: ''}">{{data.price}}</span>
 
-    <span class="text-white fs-10 cmm-txt-thin-bold mt-2">{{data.aditionalInfo}}</span>
+    <span class="fs-10 cmm-txt-thin-bold mt-2" [ngClass]="!config.textColor?'text-white':''" [ngStyle]="{'text-color':config.textColor?config.textColor: ''}">{{data.aditionalInfo}}</span>
 
   </div>
 

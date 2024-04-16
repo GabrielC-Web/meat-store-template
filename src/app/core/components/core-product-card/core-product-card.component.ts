@@ -13,9 +13,11 @@ export class CoreProductCardComponent {
    * Configuración de estilos
    */
   @Input() config: {
-    bgColor?: string
+    bgColor?: string,
+    textColor?: string
   } = {
-      bgColor: '#947676'
+      bgColor: '#947676',
+      textColor: 'black'
     }
 
   /**

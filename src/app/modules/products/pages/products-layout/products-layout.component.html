@@ -5,7 +5,7 @@
     <div class="row">
 
       <div *ngFor="let filter of filters"
-        class="col-sm-6 col-md-2 border-bottom cursor-pointer d-flex justify-content-center filter">
+        class="col-md-2 border-bottom cursor-pointer d-flex justify-content-center filter">
 
         <span class="text-center cmm-txt-thin-bold">{{filter.text}}</span>
 
@@ -36,10 +36,20 @@
   <!-- También podría interesarte -->
   <section class="col-12 mt-5">
 
-    <h3 class="cmm-txt-project-secondary text-center mb-5">También podría interesarte</h3>
+    <div class="d-flex align-items-center justify-content-center mb-5">
 
+      <div class="line cmm-bg-project-secondary"></div>
+
+      <h3 class="cmm-txt-project-secondary cmm-txt-thin-bold text-center mx-2 decorated_title">También podría interesarte</h3>
+
+      <div class="line cmm-bg-project-secondary"></div>
+
+    </div>
+
+    <!-- Componente de carrusel -->
     <cmp-cmm-carousel carouselId="hola" [customButtons]="true">
 
+      <!-- Elementos del carrusel en tamaño grande -->
       <ng-container *ngIf="!popularProductsSmallScreen.length" carousel>
 
         <!-- Items del carrusel -->
@@ -56,6 +66,7 @@
 
       </ng-container>
 
+      <!-- Elementos del carrusel en tamaño pequeño -->
       <ng-container *ngIf="popularProductsSmallScreen.length" carousel>
 
         <div *ngFor="let item of popularProductsSmallScreen, index as i" class="carousel-item h-100 w-100"

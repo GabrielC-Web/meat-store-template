@@ -1,5 +1,5 @@
-<div class="d-flex justify-content-center flex-column align-items-center p-3"
-  style="max-width: 100%;border-radius: 40px;max-width: 250px;" [style.background-color]="bgColor">
+<div class="d-flex justify-content-between flex-column align-items-center p-3 product_card h-100"
+  [ngStyle]="{'background-color':config.bgColor?config.bgColor:''}">
 
   <!-- Imagen -->
   <div class="w-100 cardImageContainer">
@@ -8,12 +8,15 @@
 
   </div>
 
-  <!-- Texto -->
-  <h5 class="text-white text-center cmm-txt-thin-bold">{{data.name}}</h5>
+  <div class="w-100 d-flex flex-column align-items-center" style="height: 40%;">
+    <!-- Texto -->
+    <h5 class="text-white text-center cmm-txt-thin-bold">{{data.name}}</h5>
 
-  <span class="text-white cmm-txt-thin-bold">{{data.price}}</span>
+    <span class="text-white cmm-txt-thin-bold">{{data.price}}</span>
 
-  <span class="text-white fs-10 cmm-txt-thin-bold mt-2">{{data.aditionalInfo}}</span>
+    <span class="text-white fs-10 cmm-txt-thin-bold mt-2">{{data.aditionalInfo}}</span>
+
+  </div>
 
   <!-- botones -->
   <div class="row g-0 w-100 mx-auto mt-3">

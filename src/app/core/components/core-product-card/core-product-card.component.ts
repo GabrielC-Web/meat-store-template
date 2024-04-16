@@ -10,9 +10,13 @@ export class CoreProductCardComponent {
   @Input() data: any
 
   /**
-   * Color de fondo
+   * Configuración de estilos
    */
-  @Input() bgColor: string = '#947676'
+  @Input() config: {
+    bgColor?: string
+  } = {
+      bgColor: '#947676'
+    }
 
   /**
    * Cantidad de producto agragada al carrito

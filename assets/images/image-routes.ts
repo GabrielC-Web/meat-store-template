@@ -1,6 +1,8 @@
 
 export const homeImages = {
-    main: 'assets/images/hOME.jpg'
+    main: 'assets/images/hOME.jpg',
+    longParallax: 'assets/images/long_parallax.png',
+    bandejita: 'assets/images/bandejita.png',
 }
 
 /**

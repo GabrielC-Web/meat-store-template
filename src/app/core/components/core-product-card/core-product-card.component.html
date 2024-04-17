@@ -11,11 +11,14 @@
   <div class="w-100 d-flex flex-column align-items-center" style="height: 40%;">
 
     <!-- Texto -->
-    <h5 class="text-center cmm-txt-thin-bold" [ngClass]="!config.textColor?'text-white':''" [ngStyle]="{'text-color':config.textColor?config.textColor: ''}">{{data.name}}</h5>
+    <h5 class="text-center cmm-txt-thin-bold" [ngClass]="!config.textColor?'text-white':''"
+      [ngStyle]="{'text-color':config.textColor?config.textColor: ''}">{{data.name}}</h5>
 
-    <span class="cmm-txt-thin-bold" [ngClass]="!config.textColor?'text-white':''" [ngStyle]="{'text-color':config.textColor?config.textColor: ''}">{{data.price}}</span>
+    <span class="cmm-txt-thin-bold" [ngClass]="!config.textColor?'text-white':''"
+      [ngStyle]="{'text-color':config.textColor?config.textColor: ''}">{{data.price}}</span>
 
-    <span class="fs-10 cmm-txt-thin-bold mt-2" [ngClass]="!config.textColor?'text-white':''" [ngStyle]="{'text-color':config.textColor?config.textColor: ''}">{{data.aditionalInfo}}</span>
+    <span class="fs-10 cmm-txt-thin-bold mt-2" [ngClass]="!config.textColor?'text-white':''"
+      [ngStyle]="{'text-color':config.textColor?config.textColor: ''}">{{data.aditionalInfo}}</span>
 
   </div>
 
@@ -49,7 +52,7 @@
 
     <!-- Botón -->
     <cmp-cmm-new-button class="cmm-txt-thin-bold fs-20 col-6" style="border-radius: 50px !important"
-      [config]="{customBorderRadius: '50px', customHeight: '35px'}" (click)="addToCart.emit()">
+      [config]="{customBorderRadius: '50px', customHeight: '35px'}" (click)="addToCart.emit();navigate()">
       <span class="cmm-txt-thin-bold">AÑADIR</span>
     </cmp-cmm-new-button>
 

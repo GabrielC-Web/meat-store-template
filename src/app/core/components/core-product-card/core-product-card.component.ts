@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'cmp-core-product-card',
@@ -39,5 +40,15 @@ export class CoreProductCardComponent {
    * Emite evento de añadir al carro
    */
   @Output() addToCart: EventEmitter<any> = new EventEmitter()
+
+  constructor(
+    private router: Router
+  ) { }
+
+  navigate() {
+
+    this.router.navigate(['products/detail'])
+
+  }
 
 }

@@ -20,3 +20,17 @@
 body {
     background-color: white;
 }
+
+.line {
+    width: 50px;
+    height: 2px;
+}
+
+@media (max-width: 400px) {
+
+    .decorated_title {
+        flex: min-content;
+        width: min-content;
+    }
+
+}

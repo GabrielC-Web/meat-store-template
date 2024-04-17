@@ -1,1 +1,76 @@
-<p>products-detail-layout works!</p>
+<section>
+
+    <!-- Componente de detalle del producto -->
+    <cmp-products-detail class="col-12"></cmp-products-detail>
+
+    <!-- También podría interesarte -->
+    <section class="col-12 my-5">
+
+        <div class="d-flex align-items-center justify-content-center mb-5">
+
+            <div class="line cmm-bg-project-secondary"></div>
+
+            <h3 class="cmm-txt-project-secondary cmm-txt-thin-bold text-center mx-2 decorated_title">No te pierdas estas
+                ofertas</h3>
+
+            <div class="line cmm-bg-project-secondary"></div>
+
+        </div>
+
+        <!-- Componente de carrusel -->
+        <cmp-cmm-carousel carouselId="hola" [customButtons]="true">
+
+            <!-- Elementos del carrusel en tamaño grande -->
+            <ng-container *ngIf="!popularProductsSmallScreen.length" carousel>
+
+                <!-- Items del carrusel -->
+                <div *ngFor="let productSection of popularProducts, index as i" class="carousel-item h-100 w-100"
+                    [ngClass]="{'active': i == 0}">
+
+                    <div class="w-100 h-100 p-0 d-flex justify-content-center align-items-center" style="gap: 2rem;">
+
+                        <cmp-core-product-card *ngFor="let item of productSection" [data]="item"
+                            [config]="{bgColor: 'linear-gradient(90deg, #290302, #5B0506)'}"></cmp-core-product-card>
+
+                    </div>
+
+                </div>
+
+            </ng-container>
+
+            <!-- Elementos del carrusel en tamaño pequeño -->
+            <ng-container *ngIf="popularProductsSmallScreen.length" carousel>
+
+                <div *ngFor="let item of popularProductsSmallScreen, index as i" class="carousel-item h-100 w-100"
+                    [ngClass]="{'active': i == 0}">
+
+                    <div class="w-100 h-100 p-0 d-flex justify-content-center align-items-center" style="gap: 2rem;">
+
+                        <cmp-core-product-card [data]="item"
+                            [config]="{bgColor: 'linear-gradient(90deg, #290302, #5B0506)'}"></cmp-core-product-card>
+
+                    </div>
+
+                </div>
+
+            </ng-container>
+
+            <!-- Botones personalizados -->
+
+            <button class="rounded" style="background-color: #947676;height: 80px;width: 60px;" prev>
+                <mat-icon class="text-white">arrow_back_ios</mat-icon>
+            </button>
+
+            <button class="carousel-control-next" type="button" class="rounded"
+                style="background-color: #947676;height: 80px;width: 60px;" next>
+                <mat-icon class="text-white">arrow_forward_ios</mat-icon>
+            </button>
+
+        </cmp-cmm-carousel>
+
+    </section>
+
+    <!-- Carrito de compras -->
+    <cmp-cmm-products-kart class="col-12 mt-5" [products]="productsList" [preBill]="prebill"></cmp-cmm-products-kart>
+
+</section>

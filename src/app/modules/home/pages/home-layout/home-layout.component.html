@@ -65,9 +65,9 @@
 </section>
 
 <!-- Horario de entregas -->
-<section class="w-100 row mx-auto" style="height: 600px;background-color: #FBFCFE;">
+<section class="w-100 row mx-auto" style="max-height: 600px;background-color: #FBFCFE;">
 
-    <div class="col-12 col-md-5 d-flex flex-column justify-content-center align-items-center px-5">
+    <div class="col-12 col-md-5 d-flex flex-column justify-content-start align-items-center px-5 pt-5">
 
         <h3 class="cmm-txt-thin-bold">HORARIO DE ENTREGAS</h3>
 
@@ -80,7 +80,11 @@
     </div>
 
     <!-- Imagen publicitaria -->
-    <div class="col-12 col-md-7"></div>
+    <div class="d-none col-12 col-md-7 d-md-flex align-items-start justify-content-center p-0">
+
+      <img [src]="homeImages.bandejita" class="w-100">
+
+    </div>
 
 </section>
 
@@ -140,7 +144,7 @@
 </section>
 
 <!-- Imagen -->
-<div class="w-100 home_bg_image" style="height: 200px;" [style.background-image]="'url(' + homeImages.main +')'">
+<div class="w-100 home_bg_image" style="height: 200px;" [style.background-image]="'url(' + homeImages.longParallax +')'">
 
 </div>
 

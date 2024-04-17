@@ -100,7 +100,7 @@
       <ng-container *ngIf="!popularProductsSmallScreen.length" carousel>
 
         <!-- Items del carrusel -->
-        <div *ngFor="let productSection of popularProducts, index as i" class="carousel-item h-100 w-100"
+        <div *ngFor="let productSection of popularProducts, index as i" class="carousel-item"
           [ngClass]="{'active': i == 0}">
 
           <div class="w-100 h-100 p-0 d-flex justify-content-center align-items-center" style="gap: 2rem;">
@@ -116,7 +116,7 @@
       <!-- Elementos del carrusel en tamaño pequeño -->
       <ng-container *ngIf="popularProductsSmallScreen.length" carousel>
 
-        <div *ngFor="let item of popularProductsSmallScreen, index as i" class="carousel-item h-100 w-100"
+        <div *ngFor="let item of popularProductsSmallScreen, index as i" class="carousel-item"
           [ngClass]="{'active': i == 0}">
 
           <div class="w-100 h-100 p-0 d-flex justify-content-center align-items-center" style="gap: 2rem;">

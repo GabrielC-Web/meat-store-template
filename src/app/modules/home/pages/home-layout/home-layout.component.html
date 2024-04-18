@@ -1,162 +1,166 @@
 <section class="w-100 d-flex align-items-center justify-content-center home_bg_image" style="height: 600px;"
-    [style.background-image]="'url(' + homeImages.main +')'">
+  [style.background-image]="'url(' + homeImages.main +')'">
 
-    <h2 class="text-white cmm-txt-thin-bold px-3">CERDO, POLLO, TERNERA... <br> A TU COCINA LLEVAMOS LAS PROTEÍNAS <br>
-        CON
-        LA CALIDAD QUE
-        PREFIERAS.</h2>
+  <h2 class="text-white cmm-txt-thin-bold px-3">CERDO, POLLO, TERNERA... <br> A TU COCINA LLEVAMOS LAS PROTEÍNAS <br>
+    CON
+    LA CALIDAD QUE
+    PREFIERAS.</h2>
 
 </section>
 
 <!-- Algunos productos -->
 <section class="popular_products d-flex align-items-center w-100 p-3"
-    style="padding-top: 6rem !important;padding-bottom: 6rem !important;">
+  style="padding-top: 6rem !important;padding-bottom: 6rem !important;">
 
+  <div [id]="'hola'" class="container carousel carousel-dark slide d-flex align-items-center w-100"
+    [attr.data-bs-touch]="true" [attr.data-bs-pause]="false" style="max-width: 100%;">
 
-    <!-- Componente de carrusel -->
-    <cmp-cmm-carousel class="w-100" carouselId="home_carousel" [customButtons]="true">
+    <!-- Indicadores de cantidade de porductos en el carrucel -->
+    <!-- <div class="carousel-indicators w-100">
 
-      <!-- Elementos del carrusel en tamaño grande -->
-      <ng-container *ngIf="!popularProductsSmallScreen.length" carousel>
+            <button *ngFor="let button of popularProducts, index as i" type="button" data-bs-target="#carousel"
+                (click)="selectTemplate(i)" attr.data-bs-slide-to="{{i}}" [ngClass]="{'active': i == 0}"
+                aria-label="Slide 1"></button>
 
-        <!-- Items del carrusel -->
-        <div *ngFor="let productSection of popularProducts, index as i" class="carousel-item h-100 w-100"
-          [ngClass]="{'active': i == 0}">
+        </div> -->
 
-          <div class="w-100 h-100 p-0 d-flex justify-content-center align-items-center" style="gap: 2rem;">
+    <!-- contendor de imagenes -->
+    <div class="carousel-inner h-100 w-100">
 
-            <cmp-core-product-card *ngFor="let item of productSection" [data]="item"></cmp-core-product-card>
+      <div *ngFor="let item of popularProductsSmallScreen, index as i" class="carousel-item h-100 w-100"
+        [ngClass]="{'active': i == 0}">
 
-          </div>
+        <div class="w-100 h-100 p-0 d-flex justify-content-center align-items-center" style="gap: 2rem;">
 
-        </div>
-
-      </ng-container>
-
-      <!-- Elementos del carrusel en tamaño pequeño -->
-      <ng-container *ngIf="popularProductsSmallScreen.length" carousel>
-
-        <div *ngFor="let item of popularProductsSmallScreen, index as i" class="carousel-item h-100 w-100"
-          [ngClass]="{'active': i == 0}">
-
-          <div class="w-100 h-100 p-0 d-flex justify-content-center align-items-center" style="gap: 2rem;">
-
-            <cmp-core-product-card [data]="item"></cmp-core-product-card>
-
-          </div>
+          <cmp-core-product-card [data]="item"></cmp-core-product-card>
 
         </div>
 
-      </ng-container>
+      </div>
+    </div>
 
-      <!-- Botones personalizados -->
+    <!-- botones -->
 
-      <button class="rounded" style="background-color: #947676;height: 80px;width: 60px;" prev>
-        <mat-icon class="text-white">arrow_back_ios</mat-icon>
+    <div class="d-flex align-items-center carousel-control-prev border-0" [attr.data-bs-target]="'#' +'hola'"
+      data-bs-slide="prev">
+
+      <button class="carousel-control-prev" type="button">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
       </button>
 
-      <button class="carousel-control-next" type="button" class="rounded"
-        style="background-color: #947676;height: 80px;width: 60px;" next>
-        <mat-icon class="text-white">arrow_forward_ios</mat-icon>
+    </div>
+
+    <div class="d-flex align-items-center carousel-control-next border-0" [attr.data-bs-target]="'#' +'hola'"
+      data-bs-slide="next">
+
+      <button class="carousel-control-next" type="button">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
       </button>
 
-    </cmp-cmm-carousel>
+    </div>
+
+  </div>
 
 </section>
 
 <!-- Horario de entregas -->
 <section class="w-100 row mx-auto" style="max-height: 600px;background-color: #FBFCFE;">
 
-    <div class="col-12 col-md-5 d-flex flex-column justify-content-start align-items-center px-5 pt-5">
+  <div class="col-12 col-md-5 d-flex flex-column justify-content-start align-items-center px-5 pt-5">
 
-        <h3 class="cmm-txt-thin-bold">HORARIO DE ENTREGAS</h3>
+    <h3 class="cmm-txt-thin-bold">HORARIO DE ENTREGAS</h3>
 
-        <p class="cmm-txt-thin-bold mt-5">ENCUENTRA AQUÍ TODA LA INFORMACIÓN ACERCA DE NUESTROS HORARIOS PARA DELIVERY Y
-            PICK
-            UP</p>
+    <p class="cmm-txt-thin-bold mt-5">ENCUENTRA AQUÍ TODA LA INFORMACIÓN ACERCA DE NUESTROS HORARIOS PARA DELIVERY Y
+      PICK
+      UP</p>
 
-        <cmp-cmm-new-button class="mt-4">VER HORARIOS</cmp-cmm-new-button>
+    <cmp-cmm-new-button class="mt-4">VER HORARIOS</cmp-cmm-new-button>
 
-    </div>
+  </div>
 
-    <!-- Imagen publicitaria -->
-    <div class="d-none col-12 col-md-7 d-md-flex align-items-start justify-content-center p-0">
+  <!-- Imagen publicitaria -->
+  <div class="d-none col-12 col-md-7 d-md-flex align-items-start justify-content-center p-0">
 
-      <img [src]="homeImages.bandejita" class="w-100">
+    <img [src]="homeImages.bandejita" class="w-100">
 
-    </div>
+  </div>
 
 </section>
 
 <!-- Carrusel inferior -->
 <section class="w-100 row mx-auto bg-white py-5 justify-content-center align-items-center">
 
-    <h3 class="cmm-txt-thin-bold text-center mb-5">ENCUENTRA PRODUCTOS ESENCIALES PARA TU PARRILLA</h3>
+  <h3 class="cmm-txt-thin-bold text-center mb-5">ENCUENTRA PRODUCTOS ESENCIALES PARA TU PARRILLA</h3>
 
-    <!-- Componente de carrusel -->
-    <cmp-cmm-carousel class="w-100" carouselId="hola" [customButtons]="true">
+  <!-- Componente de carrusel -->
+  <cmp-cmm-carousel class="w-100" carouselId="hola" [customButtons]="true">
 
-      <!-- Elementos del carrusel en tamaño grande -->
-      <ng-container *ngIf="!popularProductsSmallScreen.length" carousel>
+    <!-- Elementos del carrusel en tamaño grande -->
+    <ng-container *ngIf="!popularProductsSmallScreen.length" carousel>
 
-        <!-- Items del carrusel -->
-        <div *ngFor="let productSection of popularProducts, index as i" class="carousel-item"
-          [ngClass]="{'active': i == 0}">
+      <!-- Items del carrusel -->
+      <div *ngFor="let productSection of popularProducts, index as i" class="carousel-item"
+        [ngClass]="{'active': i == 0}">
 
-          <div class="w-100 h-100 p-0 d-flex justify-content-center align-items-center" style="gap: 2rem;">
+        <div class="w-100 h-100 p-0 d-flex justify-content-center align-items-center" style="gap: 2rem;">
 
-            <cmp-core-product-card *ngFor="let item of productSection" [data]="item" [config]="{bgColor: 'linear-gradient(90deg, #290302, #5B0506)'}"></cmp-core-product-card>
-
-          </div>
-
-        </div>
-
-      </ng-container>
-
-      <!-- Elementos del carrusel en tamaño pequeño -->
-      <ng-container *ngIf="popularProductsSmallScreen.length" carousel>
-
-        <div *ngFor="let item of popularProductsSmallScreen, index as i" class="carousel-item"
-          [ngClass]="{'active': i == 0}">
-
-          <div class="w-100 h-100 p-0 d-flex justify-content-center align-items-center" style="gap: 2rem;">
-
-            <cmp-core-product-card [data]="item" [config]="{bgColor: 'linear-gradient(90deg, #290302, #5B0506)'}"></cmp-core-product-card>
-
-          </div>
+          <cmp-core-product-card *ngFor="let item of productSection" [data]="item"
+            [config]="{bgColor: 'linear-gradient(90deg, #290302, #5B0506)'}"></cmp-core-product-card>
 
         </div>
 
-      </ng-container>
+      </div>
 
-      <!-- Botones personalizados -->
+    </ng-container>
 
-      <button class="rounded" style="background-color: #947676;height: 80px;width: 60px;" prev>
-        <mat-icon class="text-white">arrow_back_ios</mat-icon>
-      </button>
+    <!-- Elementos del carrusel en tamaño pequeño -->
+    <ng-container *ngIf="popularProductsSmallScreen.length" carousel>
 
-      <button class="carousel-control-next" type="button" class="rounded"
-        style="background-color: #947676;height: 80px;width: 60px;" next>
-        <mat-icon class="text-white">arrow_forward_ios</mat-icon>
-      </button>
+      <div *ngFor="let item of popularProductsSmallScreen, index as i" class="carousel-item"
+        [ngClass]="{'active': i == 0}">
 
-    </cmp-cmm-carousel>
+        <div class="w-100 h-100 p-0 d-flex justify-content-center align-items-center" style="gap: 2rem;">
+
+          <cmp-core-product-card [data]="item"
+            [config]="{bgColor: 'linear-gradient(90deg, #290302, #5B0506)'}"></cmp-core-product-card>
+
+        </div>
+
+      </div>
+
+    </ng-container>
+
+    <!-- Botones personalizados -->
+
+    <button class="rounded" style="background-color: #947676;height: 80px;width: 60px;" prev>
+      <mat-icon class="text-white">arrow_back_ios</mat-icon>
+    </button>
+
+    <button class="carousel-control-next" type="button" class="rounded"
+      style="background-color: #947676;height: 80px;width: 60px;" next>
+      <mat-icon class="text-white">arrow_forward_ios</mat-icon>
+    </button>
+
+  </cmp-cmm-carousel>
 
 </section>
 
 <!-- Imagen -->
-<div class="w-100 home_bg_image" style="height: 200px;" [style.background-image]="'url(' + homeImages.longParallax +')'">
+<div class="w-100 home_bg_image" style="height: 200px;"
+  [style.background-image]="'url(' + homeImages.longParallax +')'">
 </div>
 
 <!-- características del negocio con íconos -->
 <div class="w-100 row mx-auto">
 
-    <div *ngFor="let item of items" class="col-sm-3 d-flex flex-column align-items-center justify-content-center">
+  <div *ngFor="let item of items" class="col-sm-3 d-flex flex-column align-items-center justify-content-center">
 
-        <img class="w-100" [src]="item.icon" style="max-width: 100px;">
+    <img class="w-100" [src]="item.icon" style="max-width: 100px;">
 
-        <span class="text-center cmm-txt-thin-bold" style="max-width: 150px;">{{item.info}}</span>
+    <span class="text-center cmm-txt-thin-bold" style="max-width: 150px;">{{item.info}}</span>
 
-    </div>
+  </div>
 
 </div>

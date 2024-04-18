@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { logos } from 'src/assets/images/image-routes';
+import { icons, logos } from 'src/assets/images/image-routes';
 
 @Component({
   selector: 'cmp-main-footer',
@@ -9,6 +9,8 @@ import { logos } from 'src/assets/images/image-routes';
 export class MainFooterComponent {
 
   mainLogo: string = logos.main
+
+  icons = icons
 
   footerLogoHeight: number = 0
 

@@ -17,13 +17,13 @@ export class MainHeaderComponent {
       text: 'CARNES',
       menus: [
         {
-          text: 'Pollo'
+          text: 'Res'
         },
         {
-          text: 'Pavo'
+          text: 'Cerdo'
         },
         {
-          text: 'Pato'
+          text: 'Cordero'
         },
       ]
     },
@@ -43,29 +43,16 @@ export class MainHeaderComponent {
     },
     {
       text: 'EMBUTIDOS',
-      menus: [
-        {
-          text: 'Pollo'
-        },
-        {
-          text: 'Pavo'
-        },
-        {
-          text: 'Pato'
-        },
-      ]
+      menus: []
     },
     {
       text: 'OFERTAS',
       menus: [
         {
-          text: 'Pollo'
+          text: 'Combos'
         },
         {
-          text: 'Pavo'
-        },
-        {
-          text: 'Pato'
+          text: 'Descuentos'
         },
       ]
     },

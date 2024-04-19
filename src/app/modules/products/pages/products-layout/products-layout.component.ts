@@ -1,5 +1,5 @@
 import { Component, HostListener } from '@angular/core';
-import { products } from 'src/assets/images/image-routes';
+import { icons, products } from 'src/assets/images/image-routes';
 
 @Component({
   selector: 'pag-products-layout',
@@ -118,12 +118,30 @@ export class ProductsLayoutComponent {
 
   popularProductsSmallScreen: any[] = []
 
+  items: any[] = [
+    {
+      icon: icons.corn,
+      info: 'Elaborados sin gluten'
+    },
+    {
+      icon: icons.house,
+      info: 'Empresa familiar desde 1934'
+    },
+    {
+      icon: icons.corn,
+      info: 'Reparto en vehículo refrigerado'
+    },
+    {
+      icon: icons.van,
+      info: 'Envío GRATIS Pago seguro'
+    },
+  ]
 
   @HostListener('window:resize', ['$event'])
   onResize(e: Event) {
 
     //* Veo si la pantalla es lo suficientemente pequeña
-    if(window.innerWidth <= 992) {
+    if (window.innerWidth <= 992) {
       this.changeListMode()
     } else {
       this.popularProductsSmallScreen = []
@@ -131,12 +149,12 @@ export class ProductsLayoutComponent {
 
   }
 
-  constructor(){}
+  constructor() { }
 
   ngOnInit() {
 
     //* Veo si la pantalla es lo suficientemente pequeña
-    if(window.innerWidth <= 992) {
+    if (window.innerWidth <= 992) {
       this.changeListMode()
     } else {
       this.popularProductsSmallScreen = []
@@ -155,7 +173,7 @@ export class ProductsLayoutComponent {
     //* Creo el listado con todos los items por separado
     this.popularProducts.forEach(section => {
 
-      section.forEach( (item: any) => {
+      section.forEach((item: any) => {
 
         this.popularProductsSmallScreen.push(item)
 

@@ -11,8 +11,8 @@ export class ProductsOverviewLayoutComponent {
   productsList: any[] = [
     {
       image: products.product1,
-      name: 'Correa de tiempo',
-      brandName: 'General motors',
+      name: 'Muslos Protinal',
+      brandName: 'Protinal',
       sku: 'krogm93746917',
       quantity: 1,
       price: 175,
@@ -20,8 +20,8 @@ export class ProductsOverviewLayoutComponent {
     },
     {
       image: products.product1,
-      name: 'Correa de tiempo',
-      brandName: 'General motors',
+      name: 'Muslos Protinal',
+      brandName: 'Protinal',
       sku: 'krogm93746917',
       quantity: 1,
       price: 175,
@@ -29,8 +29,8 @@ export class ProductsOverviewLayoutComponent {
     },
     {
       image: products.product1,
-      name: 'Correa de tiempo',
-      brandName: 'General motors',
+      name: 'Muslos Protinal',
+      brandName: 'Protinal',
       sku: 'krogm93746917',
       quantity: 1,
       price: 175,

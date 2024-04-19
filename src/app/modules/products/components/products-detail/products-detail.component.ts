@@ -34,4 +34,26 @@ export class ProductsDetailComponent {
     }
   }
 
+  /**
+   * Añade más unidades del producto
+   */
+  addProductUnit() {
+
+    this.product.quantity += 1
+
+  }
+
+  /**
+   * Elimina unidades del producto
+   */
+  removeProductUnit() {
+
+    this.product.quantity -= 1
+
+    if (this.product.quantity < 1) {
+      this.product.quantity = 1
+    }
+
+  }
+
 }

@@ -25,7 +25,8 @@
 
         <div class="w-100 h-100 p-0 d-flex justify-content-center align-items-center" style="gap: 2rem;">
 
-          <cmp-core-product-card *ngFor="let item of productSection" [data]="item"></cmp-core-product-card>
+          <cmp-core-product-card *ngFor="let item of productSection" [data]="item"
+            routerLink="/products/detail"></cmp-core-product-card>
 
         </div>
 
@@ -41,7 +42,7 @@
 
         <div class="w-100 h-100 p-0 d-flex justify-content-center align-items-center" style="gap: 2rem;">
 
-          <cmp-core-product-card [data]="item"></cmp-core-product-card>
+          <cmp-core-product-card [data]="item" routerLink="/products/detail"></cmp-core-product-card>
 
         </div>
 

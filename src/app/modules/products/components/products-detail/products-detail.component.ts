@@ -16,21 +16,14 @@ export class ProductsDetailComponent {
     name: 'MUSLO DE POLLO',
     brand: 'PROTINAL',
     price: '175.00',
-    sku: 'KROGGM93746917',
-    partNumber: '93746917',
-    maximunPurchase: 1,
+    details: {
+      'SKU': 'KROGGM93746917',
+    },
     quantity: 1,
-    description: 'Piezas de pollo marca Protinal',
-    aditionalDetails: {
-      size: 'Dimensiones 9x30x9cm3',
-      weight: '0,9 kg.',
-      applicationModels: [
-        '2005-2014 | CHEVROLET | AVEO | 3 PUERTAS',
-        '2005-2014 | CHEVROLET | AVEO | 3 PUERTAS LT',
-        '2005-2014 | CHEVROLET | AVEO | 4 PUERTAS',
-        '2005-2014 | CHEVROLET | AVEO | 4 PUERTAS LT',
-        '2005-2014 | CHEVROLET | AVEO | 5 PUERTAS',
-      ]
+    description: {
+      'Piezas de pollo marca Protinal': '',
+      'Fecha de corte': '22 de marzo',
+      'Características': '750 gramos de muslo'
     }
   }
 

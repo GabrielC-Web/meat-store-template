@@ -8,17 +8,17 @@
 
         <div class="d-flex align-items-center justify-content-center mb-5">
 
-            <div class="line cmm-bg-project-secondary"></div>
+            <div class="line cmm-bg-project-secundary"></div>
 
-            <h3 class="cmm-txt-project-primary-secondary cmm-txt-thin-bold text-center mx-2 decorated_title">No te
+            <h3 class="cmm-txt-project-secundary cmm-txt-thin-bold text-center mx-2 decorated_title">No te
                 pierdas estas
                 ofertas</h3>
 
-            <div class="line cmm-bg-project-secondary"></div>
+            <div class="line cmm-bg-project-secundary"></div>
 
         </div>
 
-        <cmp-cmm-new-carousel>
+        <cmp-cmm-new-carousel [customButtons]="true">
 
             <!-- Elementos del carrusel en tamaño pequeño -->
             <ng-container container>
@@ -35,6 +35,16 @@
                 </div>
 
             </ng-container>
+
+            <button class="rounded"
+                style="background: linear-gradient(90deg, #290302, #5B0506);height: 60px;width: 40px;" prevButton>
+                <mat-icon class="text-white cursor-pointer">navigate_before</mat-icon>
+            </button>
+
+            <button class="carousel-control-next" type="button" class="rounded"
+                style="background: linear-gradient(90deg, #290302, #5B0506);height: 60px;width: 40px;" nextButton>
+                <mat-icon class="text-white cursor-pointer">navigate_next</mat-icon>
+            </button>
 
         </cmp-cmm-new-carousel>
 

@@ -371,15 +371,15 @@ body {
 }
 
 .cmm-txt-project-primary {
-  color: var(--v-dynamic-primary);
+  color: var(--v-dynamic-primary) !important;
 }
 
 .cmm-txt-project-secundary {
-  color: var(--v-dynamic-secundary);
+  color: var(--v-dynamic-secundary) !important;
 }
 
 .cmm-txt-project-tertiary {
-  color: var(--v-dynamic-tertiary);
+  color: var(--v-dynamic-tertiary) !important;
 }
 
 /*--------------------------------------------------------------------------------------------------------------------------------------

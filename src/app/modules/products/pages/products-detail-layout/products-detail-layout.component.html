@@ -18,12 +18,13 @@
 
         </div>
 
-        <cmp-cmm-new-carousel [customButtons]="true">
+        <!-- Carrusel -->
+        <cmp-cmm-new-carousel [customButtons]="true" carouselId="tres">
 
             <!-- Elementos del carrusel en tamaño pequeño -->
             <ng-container container>
 
-                <div *ngFor="let item of popularProductsSmallScreen, index as i" class="carousel_item">
+                <div *ngFor="let item of popularProducts, index as i" class="carousel_item">
 
                     <div class="w-100 h-100 p-0 d-flex justify-content-center align-items-center" style="gap: 2rem;">
 

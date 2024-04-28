@@ -11,62 +11,43 @@ export class HomeLayoutComponent {
   homeImages = homeImages
 
   popularProducts: any[] = [
-    [
-      {
-        image: products.product1,
-        name: 'REDONDO DE TERNERA ENTERO',
-        price: 'OFERTA $4,00',
-        aditionalInfo: 'PRECIO POR PIEZA 2,5 KG',
-      },
-      {
-        image: products.product4,
-        name: 'MILANESA DE POLLO',
-        price: 'OFERTA $4,00',
-        aditionalInfo: 'PRECIO POR PIEZA 2,5 KG',
-      },
-      {
-        image: products.product8,
-        name: 'REDONDO DE TERNERA ENTERO',
-        price: 'OFERTA $4,00',
-        aditionalInfo: 'PRECIO POR PIEZA 2,5 KG',
-      },
-    ],
-    [
-      {
-        image: products.product8,
-        name: 'REDONDO DE TERNERA ENTERO',
-        price: 'OFERTA $4,00',
-        aditionalInfo: 'PRECIO POR PIEZA 2,5 KG',
-      },
-      {
-        image: products.product1,
-        name: 'REDONDO DE TERNERA ENTERO',
-        price: 'OFERTA $4,00',
-        aditionalInfo: 'PRECIO POR PIEZA 2,5 KG',
-      },
-      {
-        image: products.product4,
-        name: 'MILANESA DE POLLO',
-        price: 'OFERTA $4,00',
-        aditionalInfo: 'PRECIO POR PIEZA 2,5 KG',
-      },
-
-    ],
-  ]
-
-  popularProductsSmallScreen: any[] = []
-
-  @HostListener('window:resize', ['$event'])
-  onResize(e: Event) {
-
-    //* Veo si la pantalla es lo suficientemente pequeña
-    if(window.innerWidth <= 992) {
-      this.changeListMode()
-    } else {
-      this.popularProductsSmallScreen = []
+    {
+      "image": "assets/images/products/chicken.png",
+      "name": "REDONDO DE TERNERA ENTERO",
+      "price": "OFERTA $4,00",
+      "aditionalInfo": "PRECIO POR PIEZA 2,5 KG"
+    },
+    {
+      "image": "assets/images/products/chicken_4.png",
+      "name": "MILANESA DE POLLO",
+      "price": "OFERTA $4,00",
+      "aditionalInfo": "PRECIO POR PIEZA 2,5 KG"
+    },
+    {
+      "image": "assets/images/products/meat.png",
+      "name": "REDONDO DE TERNERA ENTERO",
+      "price": "OFERTA $4,00",
+      "aditionalInfo": "PRECIO POR PIEZA 2,5 KG"
+    },
+    {
+      "image": "assets/images/products/meat.png",
+      "name": "REDONDO DE TERNERA ENTERO",
+      "price": "OFERTA $4,00",
+      "aditionalInfo": "PRECIO POR PIEZA 2,5 KG"
+    },
+    {
+      "image": "assets/images/products/chicken.png",
+      "name": "REDONDO DE TERNERA ENTERO",
+      "price": "OFERTA $4,00",
+      "aditionalInfo": "PRECIO POR PIEZA 2,5 KG"
+    },
+    {
+      "image": "assets/images/products/chicken_4.png",
+      "name": "MILANESA DE POLLO",
+      "price": "OFERTA $4,00",
+      "aditionalInfo": "PRECIO POR PIEZA 2,5 KG"
     }
-
-  }
+  ]
 
   /**
    * Producto seleccionado
@@ -97,14 +78,6 @@ export class HomeLayoutComponent {
   }
 
   ngOnInit() {
-
-    //* Veo si la pantalla es lo suficientemente pequeña
-    if(window.innerWidth <= 992) {
-      this.changeListMode()
-    } else {
-      this.popularProductsSmallScreen = []
-    }
-
   }
 
   /**
@@ -149,27 +122,6 @@ export class HomeLayoutComponent {
 
     // Guardo el id de la imagen seleccionada
     this.productSelected = idImg;
-
-  }
-
-  /**
-   * Genera una lista con todos los items del listado con secciones de items
-   */
-  changeListMode() {
-
-    //* Vacío el listado
-    this.popularProductsSmallScreen = []
-
-    //* Creo el listado con todos los items por separado
-    this.popularProducts.forEach(section => {
-
-      section.forEach( (item: any) => {
-
-        this.popularProductsSmallScreen.push(item)
-
-      })
-
-    })
 
   }
 

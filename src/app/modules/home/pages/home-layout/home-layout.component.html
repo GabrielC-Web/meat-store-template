@@ -12,37 +12,16 @@
 <section class="popular_products d-flex align-items-center w-100 p-3"
   style="padding-top: 6rem !important;padding-bottom: 6rem !important;">
 
-
-  <!-- Componente de carrusel -->
-  <cmp-cmm-carousel class="w-100" carouselId="home_carousel" [customButtons]="true">
-
-    <!-- Elementos del carrusel en tamaño grande -->
-    <ng-container *ngIf="!popularProductsSmallScreen.length" carousel>
-
-      <!-- Items del carrusel -->
-      <div *ngFor="let productSection of popularProducts, index as i" class="carousel-item h-100 w-100"
-        [ngClass]="{'active': i == 0}">
-
-        <div class="w-100 h-100 p-0 d-flex justify-content-center align-items-center" style="gap: 2rem;">
-
-          <cmp-core-product-card *ngFor="let item of productSection" [data]="item"
-            routerLink="/products/detail"></cmp-core-product-card>
-
-        </div>
-
-      </div>
-
-    </ng-container>
+  <cmp-cmm-new-carousel class="w-100" [customButtons]="true" carouselId="uno">
 
     <!-- Elementos del carrusel en tamaño pequeño -->
-    <ng-container *ngIf="popularProductsSmallScreen.length" carousel>
+    <ng-container container>
 
-      <div *ngFor="let item of popularProductsSmallScreen, index as i" class="carousel-item h-100 w-100"
-        [ngClass]="{'active': i == 0}">
+      <div *ngFor="let item of popularProducts, index as i" class="carousel_item">
 
         <div class="w-100 h-100 p-0 d-flex justify-content-center align-items-center" style="gap: 2rem;">
 
-          <cmp-core-product-card [data]="item" routerLink="/products/detail"></cmp-core-product-card>
+          <cmp-core-product-card [data]="item"></cmp-core-product-card>
 
         </div>
 
@@ -50,18 +29,16 @@
 
     </ng-container>
 
-    <!-- Botones personalizados -->
-
-    <button class="rounded" style="background-color: #947676;height: 80px;width: 60px;" prev>
-      <mat-icon class="text-white">arrow_back_ios</mat-icon>
+    <button class="rounded" style="background-color: #947676;height: 60px;width: 40px;" prevButton>
+      <mat-icon class="text-white cursor-pointer">navigate_before</mat-icon>
     </button>
 
     <button class="carousel-control-next" type="button" class="rounded"
-      style="background-color: #947676;height: 80px;width: 60px;" next>
-      <mat-icon class="text-white">arrow_forward_ios</mat-icon>
+      style="background-color: #947676;height: 60px;width: 40px;" nextButton>
+      <mat-icon class="text-white cursor-pointer">navigate_next</mat-icon>
     </button>
 
-  </cmp-cmm-carousel>
+  </cmp-cmm-new-carousel>
 
 </section>
 
@@ -95,31 +72,12 @@
   <h3 class="cmm-txt-thin-bold text-center mb-5">ENCUENTRA PRODUCTOS ESENCIALES PARA TU PARRILLA</h3>
 
   <!-- Componente de carrusel -->
-  <cmp-cmm-carousel class="w-100" carouselId="hola" [customButtons]="true">
-
-    <!-- Elementos del carrusel en tamaño grande -->
-    <ng-container *ngIf="!popularProductsSmallScreen.length" carousel>
-
-      <!-- Items del carrusel -->
-      <div *ngFor="let productSection of popularProducts, index as i" class="carousel-item"
-        [ngClass]="{'active': i == 0}">
-
-        <div class="w-100 h-100 p-0 d-flex justify-content-center align-items-center" style="gap: 2rem;">
-
-          <cmp-core-product-card *ngFor="let item of productSection" [data]="item"
-            [config]="{bgColor: 'linear-gradient(90deg, #290302, #5B0506)'}"></cmp-core-product-card>
-
-        </div>
-
-      </div>
-
-    </ng-container>
+  <cmp-cmm-new-carousel [customButtons]="true" carouselId="dos">
 
     <!-- Elementos del carrusel en tamaño pequeño -->
-    <ng-container *ngIf="popularProductsSmallScreen.length" carousel>
+    <ng-container container>
 
-      <div *ngFor="let item of popularProductsSmallScreen, index as i" class="carousel-item"
-        [ngClass]="{'active': i == 0}">
+      <div *ngFor="let item of popularProducts, index as i" class="carousel_item">
 
         <div class="w-100 h-100 p-0 d-flex justify-content-center align-items-center" style="gap: 2rem;">
 
@@ -132,18 +90,17 @@
 
     </ng-container>
 
-    <!-- Botones personalizados -->
-
-    <button class="rounded" style="background-color: #947676;height: 80px;width: 60px;" prev>
-      <mat-icon class="text-white">arrow_back_ios</mat-icon>
+    <button class="rounded" style="background: linear-gradient(90deg, #290302, #5B0506);height: 60px;width: 40px;"
+      prevButton>
+      <mat-icon class="text-white cursor-pointer">navigate_before</mat-icon>
     </button>
 
     <button class="carousel-control-next" type="button" class="rounded"
-      style="background-color: #947676;height: 80px;width: 60px;" next>
-      <mat-icon class="text-white">arrow_forward_ios</mat-icon>
+      style="background: linear-gradient(90deg, #290302, #5B0506);height: 60px;width: 40px;" nextButton>
+      <mat-icon class="text-white cursor-pointer">navigate_next</mat-icon>
     </button>
 
-  </cmp-cmm-carousel>
+  </cmp-cmm-new-carousel>
 
 </section>
 

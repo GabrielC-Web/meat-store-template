@@ -141,8 +141,6 @@ export class ProductsDetailLayoutComponent {
 
     })
 
-    console.log(this.popularProductsSmallScreen);
-
   }
 
 }

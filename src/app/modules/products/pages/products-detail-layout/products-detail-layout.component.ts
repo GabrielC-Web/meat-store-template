@@ -103,7 +103,7 @@ export class ProductsDetailLayoutComponent {
     if (window.innerWidth <= 992) {
       this.changeListMode()
     } else {
-      this.popularProductsSmallScreen = []
+      // this.popularProductsSmallScreen = []
     }
 
   }
@@ -111,12 +111,13 @@ export class ProductsDetailLayoutComponent {
   constructor() { }
 
   ngOnInit() {
+    this.changeListMode()
 
     //* Veo si la pantalla es lo suficientemente pequeña
     if (window.innerWidth <= 992) {
       this.changeListMode()
     } else {
-      this.popularProductsSmallScreen = []
+      // this.popularProductsSmallScreen = []
     }
 
   }
@@ -139,6 +140,8 @@ export class ProductsDetailLayoutComponent {
       })
 
     })
+
+    console.log(this.popularProductsSmallScreen);
 
   }
 

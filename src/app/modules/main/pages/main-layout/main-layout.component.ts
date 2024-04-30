@@ -14,6 +14,27 @@ export class MainLayoutComponent {
   footerConfig: CmmEcomFooterConfig = {
     bgColor: '#343434',
     textClass: 'cmm-txt-project-primary',
+    businessQualitiesConfig: {
+      widthClass: 'col-sm-3'
+    },
+    items: [
+      {
+        icon: icons.corn,
+        info: 'Elaborados sin gluten'
+      },
+      {
+        icon: icons.house,
+        info: 'Empresa familiar desde 1934'
+      },
+      {
+        icon: icons.corn,
+        info: 'Reparto en vehículo refrigerado'
+      },
+      {
+        icon: icons.van,
+        info: 'Envío GRATIS Pago seguro'
+      },
+    ],
     mainLogo: logos.main,
     mainLogoSize: { width: '60px', height: '60px' },
     socialNetworkIcons: [

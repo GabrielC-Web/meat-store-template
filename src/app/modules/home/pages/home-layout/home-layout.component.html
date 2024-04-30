@@ -108,16 +108,3 @@
 <div class="w-100 home_bg_image" style="height: 200px;"
   [style.background-image]="'url(' + homeImages.longParallax +')'">
 </div>
-
-<!-- características del negocio con íconos -->
-<div class="w-100 row mx-auto py-4">
-
-  <div *ngFor="let item of items" class="col-sm-3 d-flex flex-column align-items-center justify-content-center">
-
-    <img class="w-100" [src]="item.icon" style="max-width: 100px;">
-
-    <span class="text-center cmm-txt-thin-bold" style="max-width: 150px;">{{item.info}}</span>
-
-  </div>
-
-</div>

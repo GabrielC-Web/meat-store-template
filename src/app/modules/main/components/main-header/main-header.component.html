@@ -30,11 +30,13 @@
         placeholder="¿Qué necesitas?" label="¿Qué necesitas?" subscriptSizing="dynamic"></cmm-cmp-i-text>
 
     <!-- Botones -->
-    <div class="d-none d-md-flex flex-row">
+    <div class="d-none d-md-flex flex-row gap-3">
 
-        <img [src]="icons.person" class="header_icon cursor-pointer">
+        <mat-icon class="header_icon fs-30 cursor-pointer">person</mat-icon>
+        <mat-icon class="header_icon fs-30 cursor-pointer" routerLink="products/overview">shopping_cart</mat-icon>
 
-        <img [src]="icons.kart" class="header_icon cursor-pointer" routerLink="products/overview">
+        <!-- <img [src]="icons.person" class="header_icon cursor-pointer">
+        <img [src]="icons.kart" class="header_icon cursor-pointer" routerLink="products/overview"> -->
 
     </div>
 
@@ -66,9 +68,8 @@
 
         <div class="d-flex flex-column align-items-center">
 
-            <img [src]="icons.person" class="header_icon cursor-pointer">
-
-            <img [src]="icons.kart" class="header_icon cursor-pointer" routerLink="products/overview">
+            <mat-icon class="header_icon fs-30 cursor-pointer">person</mat-icon>
+            <mat-icon class="header_icon fs-30 cursor-pointer" routerLink="products/overview">shopping_cart</mat-icon>
 
         </div>
 

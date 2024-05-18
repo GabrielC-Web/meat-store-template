@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 import { CmmEcomFooterConfig } from 'src/app/common/data/utils/models/ecommerce.models';
 import { icons, logos } from 'src/assets/images/image-routes';
 
@@ -61,6 +62,11 @@ export class MainLayoutComponent {
     ]
   }
 
+  /**
+   * Ruta actual en la que estoy
+   */
+  currentRoute: string = ''
+
   @HostListener('window:resize')
   onResize(e: any) {
     this.calculateHeaderSize()
@@ -73,10 +79,13 @@ export class MainLayoutComponent {
 
   }
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
-
+    this.currentRoute = location.href
+    this.listenRouteChanges()
   }
 
   ngAfterViewInit() {
@@ -112,6 +121,14 @@ export class MainLayoutComponent {
       header.classList.remove('fixed_header')
 
     }
+
+  }
+
+  listenRouteChanges() {
+
+    this.router.events.subscribe(event => {
+      this.currentRoute = location.href
+    })
 
   }
 

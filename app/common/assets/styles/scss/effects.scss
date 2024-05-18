@@ -254,6 +254,28 @@ p {
   }
 }
 
+.btn-project-secundary-outline {
+  background-color: $v-white !important;
+  color: var(--v-dynamic-secundary) !important;
+  border: 2px solid var(--v-dynamic-secundary) !important;
+
+  &:hover {
+    background-color: var(--v-dynamic-secundary) !important;
+    color: $v-white !important;
+  }
+}
+
+.btn-project-tertiary-outline {
+  background-color: $v-white !important;
+  color: var(--v-dynamic-tertiary) !important;
+  border: 2px solid var(--v-dynamic-tertiary) !important;
+
+  &:hover {
+    background-color: var(--v-dynamic-tertiary) !important;
+    color: $v-white !important;
+  }
+}
+
 /*---------------------------------------------------------------------------------------------------------------------------------
 END BUTTON
 --------------------------------------------------------------------------------------------------------------------------------------*/
@@ -571,4 +593,39 @@ END CARDS
 
 .flip_back {
   transform: rotateY(180deg);
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------
+ Para el popup de búsqueda y header
+--------------------------------------------------------------------------------------------------------------------------------------*/
+
+.header_icon {
+  width: 30px !important;
+  height: 30px !important;
+  font-size: 30px !important;
+  margin: 0 !important;
+}
+
+.input_default,
+.input_default:focus,
+.input_default:active {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  outline: none !important;
+  border: none;
+  background: transparent;
+}
+
+.input_default::placeholder {
+  color: var(--v-dynamic-primary) !important;
+}
+
+// Efecto para elevar item al hacerle hover
+.hover_translateY:hover {
+  transform: translateY(-5px);
+}
+
+.rounded_30 {
+  border-radius: 30px !important;
 }

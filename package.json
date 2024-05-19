@@ -1,13 +1,13 @@
 {
   "name": "meat-store-template",
-  "version": "0.0.51",
+  "version": "0.0.52",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng deploy --base-href=/meat-store-template/"
+    "deploy": "ng deploy --base-href=/meat-store-template/ --no-silent"
   },
   "private": true,
   "dependencies": {

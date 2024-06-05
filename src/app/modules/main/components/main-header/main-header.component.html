@@ -12,13 +12,13 @@
                 class="cmm-txt-thin-bold">{{button.text}}</button>
 
             <button *ngIf="!button.menus.length" mat-button class="cmm-txt-thin-bold"
-                [routerLink]="'products'">{{button.text}}</button>
+                [routerLink]="'Productos'">{{button.text}}</button>
 
             <!-- Menú -->
             <mat-menu #belowMenu="matMenu" yPosition="below" [ngClass]="button.menus.length == 0? 'd-none': ''">
 
                 <button class="border-bottom" *ngFor="let item of button.menus" mat-menu-item
-                    [routerLink]="'products'">{{item.text}}</button>
+                    [routerLink]="'Productos'">{{item.text}}</button>
 
             </mat-menu>
 
@@ -33,10 +33,10 @@
     <div class="d-none d-md-flex flex-row gap-3">
 
         <mat-icon class="header_icon fs-30 cursor-pointer">person</mat-icon>
-        <mat-icon class="header_icon fs-30 cursor-pointer" routerLink="products/overview">shopping_cart</mat-icon>
+        <mat-icon class="header_icon fs-30 cursor-pointer" routerLink="Productos/Carrito">shopping_cart</mat-icon>
 
         <!-- <img [src]="icons.person" class="header_icon cursor-pointer">
-        <img [src]="icons.kart" class="header_icon cursor-pointer" routerLink="products/overview"> -->
+        <img [src]="icons.kart" class="header_icon cursor-pointer" routerLink="products/Carrito"> -->
 
     </div>
 
@@ -54,7 +54,7 @@
 
                 <!-- Botón -->
                 <button mat-button [matMenuTriggerFor]="belowMenu" class="cmm-txt-thin-bold"
-                    [routerLink]="'products'">{{button.text}}</button>
+                    [routerLink]="'Productos'">{{button.text}}</button>
 
                 <!-- Menú -->
                 <mat-menu #belowMenu="matMenu" yPosition="below" [ngClass]="button.menus.length == 0? 'd-none': ''">
@@ -69,7 +69,7 @@
         <div class="d-flex flex-column align-items-center">
 
             <mat-icon class="header_icon fs-30 cursor-pointer">person</mat-icon>
-            <mat-icon class="header_icon fs-30 cursor-pointer" routerLink="products/overview">shopping_cart</mat-icon>
+            <mat-icon class="header_icon fs-30 cursor-pointer" routerLink="products/Carrito">shopping_cart</mat-icon>
 
         </div>
 

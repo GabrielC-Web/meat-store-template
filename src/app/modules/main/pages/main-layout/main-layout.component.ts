@@ -37,6 +37,7 @@ export class MainLayoutComponent {
       },
     ],
     mainLogo: logos.main,
+    useMainColorWhatsapp: true,
     mainLogoSize: { width: '60px', height: '60px' },
     socialNetworkIcons: [
       icons.instagram,
